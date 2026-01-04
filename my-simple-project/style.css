@@ -1,0 +1,306 @@
+/* Modern, minimal, nature-inspired CSS for بذر بارون */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Vazir", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);
+  color: #2e7d32;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  direction: rtl;
+  min-height: 100vh;
+  background-image: radial-gradient(
+      circle at 25% 25%,
+      rgba(76, 175, 80, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(129, 199, 132, 0.1) 0%,
+      transparent 50%
+    );
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #4caf50 0%, #66bb6a 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+.logo img {
+  width: full;
+  height: full;
+  margin-left: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.05);
+}
+.logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.social-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-btn:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .social-btn {
+    width: 180px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .social-btn img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Slogan */
+.slogan {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #c8e6c9 0%, #dcedc8 100%);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #388e3c;
+  position: relative;
+  overflow: hidden;
+}
+.slogan::before {
+  content: "🌱";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  opacity: 0.3;
+}
+.slogan::after {
+  content: "🌿";
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  opacity: 0.3;
+}
+
+/* Description */
+.description {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 4rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1s ease-out;
+}
+.description p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #424242;
+}
+
+/* Donation */
+.donation {
+  background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.donation h2 {
+  color: #388e3c;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.donation p {
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.card {
+  display: inline-block;
+  background: linear-gradient(135deg, #fff 0%, #f5f5f5 100%);
+  border: 2px solid #4caf50;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Courier New", monospace;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #66bb6a;
+}
+.card p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+#copyMessage {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #4caf50;
+  font-weight: 700;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#copyMessage.show {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #4caf50 0%, #388e3c 100%);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  .logo {
+    margin-bottom: 1rem;
+  }
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  .slogan {
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+  }
+  .description {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+  .donation {
+    padding: 2rem 1rem;
+  }
+  .donation h2 {
+    font-size: 1.6rem;
+  }
+  .card {
+    padding: 1rem 1.5rem;
+  }
+  .card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slogan {
+    font-size: 1rem;
+  }
+  .description p {
+    font-size: 1rem;
+  }
+  .donation p {
+    font-size: 1rem;
+  }
+}
