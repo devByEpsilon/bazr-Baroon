@@ -1,5 +1,5 @@
 function copyCard() {
-  const text = "6037 9981 2940 1963";
+  const text = "1963 2940 9981 6037";
   navigator.clipboard.writeText(text).then(() => {
     const msg = document.getElementById("copyMessage");
     msg.textContent = "کپی شد!";
